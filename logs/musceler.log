@@ -22,3 +22,55 @@ URL: http://hhrrr.ru/musceler/scrn-00070.png
 2025-12-09 01:05:39,574 [INFO] [watcher] send_last_screenshot output: Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.05.36.png
 URL: http://hhrrr.ru/musceler/scrn-00071.png
 Ссылка скопирована в буфер обмена.
+2025-12-09 01:21:58,001 [INFO] [watcher] Найдены новые файлы: Снимок экрана 2025-12-09 в 01.21.56.png
+2025-12-09 01:21:58,002 [INFO] [watcher] Обработка файла: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.21.56.png
+2025-12-09 01:21:58,002 [INFO] [watcher] Запуск send_last_screenshot: ['/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python', '/Users/ufoanima/Dev/personal/musceler/scripts/send_last_screenshot.py']
+2025-12-09 01:21:59,865 [INFO] [watcher] send_last_screenshot returncode=0
+2025-12-09 01:21:59,866 [INFO] [watcher] send_last_screenshot output: Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.21.56.png
+URL: http://hhrrr.ru/musceler/scrn-00072.png
+Ссылка скопирована в буфер обмена.
+2025-12-09 01:48:25,294 [INFO] [watcher] ===== watcher startup =====
+2025-12-09 01:48:25,295 [INFO] [watcher] sys.argv: ['/Users/ufoanima/Dev/personal/musceler/scripts/watcher.py']
+2025-12-09 01:48:25,295 [INFO] [watcher] __file__: /Users/ufoanima/Dev/personal/musceler/scripts/watcher.py
+2025-12-09 01:48:25,295 [INFO] [watcher] cwd: /
+2025-12-09 01:48:25,295 [INFO] [watcher] HOME: /Users/ufoanima
+2025-12-09 01:48:25,295 [INFO] [watcher] USER: ufoanima
+2025-12-09 01:48:25,295 [INFO] [watcher] PATH: /usr/bin:/bin:/usr/sbin:/sbin
+2025-12-09 01:48:25,295 [INFO] [watcher] SCREENSHOTS_DIR: /Users/ufoanima/Dev/personal/musceler/scrn
+2025-12-09 01:48:25,295 [INFO] [watcher] ===== end startup =====
+2025-12-09 01:48:25,295 [INFO] [watcher] Старт. Наблюдаю за /Users/ufoanima/Dev/personal/musceler/scrn
+2025-12-09 01:52:53,926 [INFO] [watcher] Найдены новые файлы: Снимок экрана 2025-12-09 в 01.52.52.png
+2025-12-09 01:52:53,926 [INFO] [watcher] Обработка файла: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.52.52.png
+2025-12-09 01:52:53,926 [INFO] [watcher] Запуск send_last_screenshot: ['/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python', '/Users/ufoanima/Dev/personal/musceler/scripts/send_last_screenshot.py']
+2025-12-09 01:52:53,978 [INFO] [watcher] send_last_screenshot returncode=1
+2025-12-09 01:52:53,978 [ERROR] [watcher] send_last_screenshot stderr/stdout: Traceback (most recent call last):
+  File "/Users/ufoanima/Dev/personal/musceler/scripts/send_last_screenshot.py", line 6, in <module>
+    BASE_DIR = Path(__file__).resolve().parent.parent
+NameError: name 'Path' is not defined
+2025-12-09 01:54:29,074 [INFO] [watcher] Найдены новые файлы: Снимок экрана 2025-12-09 в 01.54.28.png
+2025-12-09 01:54:29,075 [INFO] [watcher] Обработка файла: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.54.28.png
+2025-12-09 01:54:29,075 [INFO] [watcher] Запуск send_last_screenshot: ['/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python', '/Users/ufoanima/Dev/personal/musceler/scripts/send_last_screenshot.py']
+2025-12-09 01:54:31,609 [INFO] [watcher] send_last_screenshot returncode=0
+2025-12-09 01:54:31,609 [INFO] [watcher] send_last_screenshot output: Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.54.28.png
+URL: http://hhrrr.ru/musceler/scrn-00073.png
+Ссылка скопирована в буфер обмена.
+DEBUG: перед notify_screenshot_uploaded
+DEBUG: после notify_screenshot_uploaded
+2025-12-09 01:54:39,066 [INFO] [watcher] Найдены новые файлы: Снимок экрана 2025-12-09 в 01.54.38.png
+2025-12-09 01:54:39,066 [INFO] [watcher] Обработка файла: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.54.38.png
+2025-12-09 01:54:39,066 [INFO] [watcher] Запуск send_last_screenshot: ['/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python', '/Users/ufoanima/Dev/personal/musceler/scripts/send_last_screenshot.py']
+2025-12-09 01:54:40,841 [INFO] [watcher] send_last_screenshot returncode=0
+2025-12-09 01:54:40,842 [INFO] [watcher] send_last_screenshot output: Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.54.38.png
+URL: http://hhrrr.ru/musceler/scrn-00074.png
+Ссылка скопирована в буфер обмена.
+DEBUG: перед notify_screenshot_uploaded
+DEBUG: после notify_screenshot_uploaded
+2025-12-09 01:55:31,259 [INFO] [watcher] Найдены новые файлы: Снимок экрана 2025-12-09 в 01.55.30.png
+2025-12-09 01:55:31,259 [INFO] [watcher] Обработка файла: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.55.30.png
+2025-12-09 01:55:31,259 [INFO] [watcher] Запуск send_last_screenshot: ['/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python', '/Users/ufoanima/Dev/personal/musceler/scripts/send_last_screenshot.py']
+2025-12-09 01:55:33,625 [INFO] [watcher] send_last_screenshot returncode=0
+2025-12-09 01:55:33,626 [INFO] [watcher] send_last_screenshot output: Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.55.30.png
+URL: http://hhrrr.ru/musceler/scrn-00075.png
+Ссылка скопирована в буфер обмена.
+DEBUG: перед notify_screenshot_uploaded
+DEBUG: после notify_screenshot_uploaded

@@ -1,6 +1,7 @@
-from pathlib import Path
+# scripts/send_last_screenshot.py
 import subprocess
 import sys
+from pathlib import Path
 
 # Базовая директория проекта: /Users/ufoanima/Dev/personal/musceler
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,8 +79,9 @@ def main():
     copy_to_clipboard(url)
     print("Ссылка скопирована в буфер обмена.")
 
+    print("DEBUG: перед notify_screenshot_uploaded")
     notify_screenshot_uploaded(url)
-
+    print("DEBUG: после notify_screenshot_uploaded")
 
 if __name__ == "__main__":
     main()

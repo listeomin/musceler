@@ -1,3 +1,4 @@
+# scripts/notification.py
 import re
 import subprocess
 
@@ -23,7 +24,7 @@ def notify_screenshot_uploaded(url: str) -> None:
     try:
         subprocess.run(
             [
-                "terminal-notifier",
+                "/usr/local/bin/terminal-notifier",
                 "-title", "Musceler",
                 "-message", message,
                 "-open", url,
