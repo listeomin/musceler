@@ -1,0 +1,126 @@
+import re
+import sys
+import subprocess
+from pathlib import Path
+
+# Настройки
+SERVER = "root@92.255.76.109"
+REMOTE_DIR = "/var/www/hhrrr.ru/musceler"
+BASE_URL = "http://hhrrr.ru/musceler"
+
+# Имена вида scrn-00001.png, scrn-12345.jpg и т.п.
+SCRN_PATTERN = re.compile(r"^scrn-(\d{5})\.(png|jpg|jpeg)$", re.IGNORECASE)
+
+# Максимальное количество файлов, которое мы хотим хранить на сервере
+MAX_FILES = 100
+
+
+def list_remote_files() -> list[str]:
+    """
+    Возвращает список имён файлов в REMOTE_DIR на сервере.
+    """
+    cmd = ["ssh", SERVER, "ls", "-1", REMOTE_DIR]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+
+    if result.returncode != 0:
+        print("Предупреждение: не удалось получить список файлов на сервере.")
+        return []
+
+    files = []
+    for line in result.stdout.splitlines():
+        name = line.strip()
+        if name:
+            files.append(name)
+    return files
+
+
+def get_next_scrn_name_and_oldest(files: list[str]) -> tuple[str, str | None]:
+    """
+    По списку файлов:
+    - находит максимальный scrn-xxxxx.* и возвращает следующее имя (xxxxx + 1) в формате .png
+    - находит минимальный scrn-xxxxx.* (самый старый по номеру) и возвращает его имя,
+      если файлов больше либо равно MAX_FILES, иначе None.
+    """
+    max_num = 0
+    min_num = None
+    names_by_num = {}
+
+    for name in files:
+        m = SCRN_PATTERN.match(name)
+        if not m:
+            continue
+        num = int(m.group(1))
+        ext = m.group(2)
+        names_by_num[num] = f"scrn-{num:05d}.{ext}"
+
+        if num > max_num:
+            max_num = num
+        if min_num is None or num < min_num:
+            min_num = num
+
+    # Следующий номер
+    next_num = max_num + 1
+    next_name = f"scrn-{next_num:05d}.png"
+
+    # Определяем, нужно ли удалить самый старый файл
+    oldest_name = None
+    scrn_count = len(names_by_num)
+    if scrn_count >= MAX_FILES and min_num is not None:
+        oldest_name = names_by_num[min_num]
+
+    return next_name, oldest_name
+
+
+def delete_remote_file(filename: str):
+    """
+    Удаляет файл filename в REMOTE_DIR на сервере.
+    """
+    remote_path = f"{REMOTE_DIR}/{filename}"
+    cmd = ["ssh", SERVER, "rm", "-f", remote_path]
+    print(f"Удаляю старый файл на сервере: {filename}")
+    result = subprocess.run(cmd)
+    if result.returncode != 0:
+        print(f"Предупреждение: не удалось удалить файл {filename} на сервере.")
+
+
+def upload_file_as_scrn(local_path: Path):
+    if not local_path.exists():
+        print(f"Файл не найден: {local_path}")
+        sys.exit(1)
+
+    # Получаем список файлов на сервере
+    files = list_remote_files()
+
+    # Определяем имя для нового файла и, при необходимости, самый старый файл для удаления
+    remote_name, oldest_name = get_next_scrn_name_and_oldest(files)
+
+    # Если нужно, удаляем самый старый файл
+    if oldest_name:
+        delete_remote_file(oldest_name)
+
+    # Загружаем новый файл
+    remote_path = f"{SERVER}:{REMOTE_DIR}/{remote_name}"
+    cmd = ["scp", str(local_path), remote_path]
+    print("Выполняю:", " ".join(cmd))
+
+    result = subprocess.run(cmd)
+    if result.returncode != 0:
+        print("Ошибка при выполнении scp")
+        sys.exit(result.returncode)
+
+    url = f"{BASE_URL}/{remote_name}"
+    print("Готово. URL:", url)
+    return url
+
+
+def main():
+    if len(sys.argv) != 2:
+        print("Использование: python3 musceler.py /путь/к/файлу")
+        sys.exit(1)
+
+    local_path = Path(sys.argv[1]).expanduser()
+    upload_file_as_scrn(local_path)
+
+
+if __name__ == "__main__":
+    main()
