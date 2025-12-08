@@ -1,7 +1,6 @@
 from pathlib import Path
 import subprocess
 import sys
-import os
 
 # Базовая директория проекта: /Users/ufoanima/Dev/personal/musceler
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,25 +14,8 @@ SCREENSHOTS_DIR = BASE_DIR / "scrn"
 # Путь к musceler.py
 MUSCELER_SCRIPT = SCRIPTS_DIR / "musceler.py"
 
-
-def notify_screenshot_uploaded(url: str) -> None:
-    """
-    Показывает системное уведомление через terminal-notifier.
-    """
-    try:
-        subprocess.run(
-            [
-                "terminal-notifier",
-                "-title", "Musceler",
-                "-message", "Скриншот на сервере!",
-                "-subtitle", url,          # можно убрать, если не хочешь URL
-                # "-open", url,            # раскомментируй, если нужно открывать в браузере по клику
-            ],
-            check=False,
-        )
-    except FileNotFoundError:
-        # terminal-notifier не установлен / не найден — молча игнорируем
-        pass
+# Импортируем уведомления из отдельного файла notification.py
+from notification import notify_screenshot_uploaded
 
 
 def get_last_screenshot() -> Path:
