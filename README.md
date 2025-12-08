@@ -15,7 +15,7 @@ musceler/
 ├─ scripts/         # все .py-скрипты
 │  ├─ musceler.py
 │  ├─ send_last_screenshot.py
-│  ├─notification.py
+│  ├─ notification.py
 │  └─ watcher.py
 ├─ logs/            # все логи
 │  ├─ musceler.log
@@ -51,7 +51,12 @@ Cледит за новыми скриншотами.
 * вычисляет следующее имя scrn-XXXXX.png
 * копирует локальный файл на сервер через scp под этим именем
 * выводит готовый публичный URL вида http://hhrrr.ru/musceler/scrn-XXXXX.png.
-###notification.py:
+### notification.py:
+Показывает системное уведомление о загруженном скриншоте.
+* извлекает номер скрина из URL (scrn-00025.png → 00025)
+* формирует текст HHRRRru!!1 Скриншот %НОМЕР% на сервере!
+* показывает нативное macOS‑уведомление через terminal-notifier
+* по клику по уведомлению открывает скриншот в браузере по умолчанию.
 ### Логи
 musceler.log — стандартный вывод (stdout) watcher.py
 musceler.err.log — стандартный поток ошибок (stderr) watcher.py.
