@@ -7,6 +7,7 @@ from pathlib import Path
 SERVER = "root@92.255.76.109"
 REMOTE_DIR = "/var/www/hhrrr.ru/musceler"
 BASE_URL = "http://hhrrr.ru/musceler"
+SSH_KEY = "/Users/ufoanima/.ssh/id_rsa"
 
 # Имена вида scrn-00001.png, scrn-12345.jpg и т.п.
 SCRN_PATTERN = re.compile(r"^scrn-(\d{5})\.(png|jpg|jpeg)$", re.IGNORECASE)
@@ -17,7 +18,7 @@ def get_next_scrn_name() -> str:
     Подключается к серверу, смотрит файлы в musceler,
     находит максимальный scrn-xxxxx.* и возвращает следующее имя (xxxxx + 1).
     """
-    cmd = ["ssh", SERVER, "ls", "-1", REMOTE_DIR]
+    cmd = ["ssh", "-i", SSH_KEY, SERVER, "ls", "-1", REMOTE_DIR]
     result = subprocess.run(cmd, capture_output=True, text=True)
 
     if result.returncode != 0:
@@ -45,7 +46,7 @@ def upload_file_as_scrn(local_path: Path):
     remote_name = get_next_scrn_name()
     remote_path = f"{SERVER}:{REMOTE_DIR}/{remote_name}"
 
-    cmd = ["scp", str(local_path), remote_path]
+    cmd = ["scp", "-i", SSH_KEY, str(local_path), remote_path]
     print("Выполняю:", " ".join(cmd))
 
     result = subprocess.run(cmd)

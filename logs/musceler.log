@@ -1,140 +1,24 @@
-[watcher] Старт. Наблюдаю за /Users/ufoanima/Dev/personal/musceler/scrn
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 19.32.31.png
-URL: http://hhrrr.ru/musceler/scrn-00008.png
+[Developer] Ожидаю увидеть логи ниже.2025-12-09 01:05:27,058 [INFO] [watcher] ===== watcher startup =====
+2025-12-09 01:05:27,058 [INFO] [watcher] sys.argv: ['/Users/ufoanima/Dev/personal/musceler/scripts/watcher.py']
+2025-12-09 01:05:27,058 [INFO] [watcher] __file__: /Users/ufoanima/Dev/personal/musceler/scripts/watcher.py
+2025-12-09 01:05:27,059 [INFO] [watcher] cwd: /
+2025-12-09 01:05:27,059 [INFO] [watcher] HOME: /Users/ufoanima
+2025-12-09 01:05:27,059 [INFO] [watcher] USER: ufoanima
+2025-12-09 01:05:27,059 [INFO] [watcher] PATH: /usr/bin:/bin:/usr/sbin:/sbin
+2025-12-09 01:05:27,059 [INFO] [watcher] SCREENSHOTS_DIR: /Users/ufoanima/Dev/personal/musceler/scrn
+2025-12-09 01:05:27,059 [INFO] [watcher] ===== end startup =====
+2025-12-09 01:05:27,059 [INFO] [watcher] Старт. Наблюдаю за /Users/ufoanima/Dev/personal/musceler/scrn
+2025-12-09 01:05:34,590 [INFO] [watcher] Найдены новые файлы: Снимок экрана 2025-12-09 в 01.05.33.png
+2025-12-09 01:05:34,591 [INFO] [watcher] Обработка файла: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.05.33.png
+2025-12-09 01:05:34,592 [INFO] [watcher] Запуск send_last_screenshot: ['/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python', '/Users/ufoanima/Dev/personal/musceler/scripts/send_last_screenshot.py']
+2025-12-09 01:05:36,700 [INFO] [watcher] send_last_screenshot returncode=0
+2025-12-09 01:05:36,701 [INFO] [watcher] send_last_screenshot output: Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.05.33.png
+URL: http://hhrrr.ru/musceler/scrn-00070.png
 Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 19.32.33.png
-URL: http://hhrrr.ru/musceler/scrn-00009.png
+2025-12-09 01:05:37,771 [INFO] [watcher] Найдены новые файлы: Снимок экрана 2025-12-09 в 01.05.36.png
+2025-12-09 01:05:37,773 [INFO] [watcher] Обработка файла: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.05.36.png
+2025-12-09 01:05:37,773 [INFO] [watcher] Запуск send_last_screenshot: ['/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python', '/Users/ufoanima/Dev/personal/musceler/scripts/send_last_screenshot.py']
+2025-12-09 01:05:39,574 [INFO] [watcher] send_last_screenshot returncode=0
+2025-12-09 01:05:39,574 [INFO] [watcher] send_last_screenshot output: Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-09 в 01.05.36.png
+URL: http://hhrrr.ru/musceler/scrn-00071.png
 Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 19.32.45.png
-URL: http://hhrrr.ru/musceler/scrn-00010.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 19.32.50.png
-URL: http://hhrrr.ru/musceler/scrn-00011.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 20.39.42 1.png
-URL: http://hhrrr.ru/musceler/scrn-00012.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 20.39.42 1.png
-URL: http://hhrrr.ru/musceler/scrn-00013.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 20.43.33.png
-URL: http://hhrrr.ru/musceler/scrn-00014.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 20.43.38.png
-URL: http://hhrrr.ru/musceler/scrn-00015.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 20.44.58.png
-URL: http://hhrrr.ru/musceler/scrn-00016.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 20.45.33.png
-URL: http://hhrrr.ru/musceler/scrn-00017.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 20.47.54.png
-URL: http://hhrrr.ru/musceler/scrn-00018.png
-Ссылка скопирована в буфер обмена.
-[watcher] send_last_screenshot.py отработал:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 21.21.31.png
-URL: http://hhrrr.ru/musceler/scrn-00019.png
-Ссылка скопирована в буфер обмена.
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.26.18.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.27.10.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.27.16.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.27.28.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.27.42.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.27.50.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.28.49.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.43.54.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.44.05.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
-Последний скриншот: /Users/ufoanima/Dev/personal/musceler/scrn/Снимок экрана 2025-12-08 в 22.45.05.png
-musceler.py завершился с ошибкой:
-Permission denied, please try again.
-Permission denied, please try again.
-root@92.255.76.109: Permission denied (publickey,password).
-scp: Connection closed
-
-
-[watcher] Ошибка при запуске send_last_screenshot.py:
