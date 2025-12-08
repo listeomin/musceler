@@ -1,0 +1,8 @@
+scrn/
+logs/
+*.log
+*.err.log
+*.pyc
+watcher.plist
+__pycache__/
+.DS_Store
