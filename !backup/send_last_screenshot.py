@@ -16,26 +16,6 @@ SCREENSHOTS_DIR = BASE_DIR / "scrn"
 MUSCELER_SCRIPT = SCRIPTS_DIR / "musceler.py"
 
 
-def notify_screenshot_uploaded(url: str) -> None:
-    """
-    Показывает системное уведомление через terminal-notifier.
-    """
-    try:
-        subprocess.run(
-            [
-                "terminal-notifier",
-                "-title", "Musceler",
-                "-message", "Скриншот на сервере!",
-                "-subtitle", url,          # можно убрать, если не хочешь URL
-                # "-open", url,            # раскомментируй, если нужно открывать в браузере по клику
-            ],
-            check=False,
-        )
-    except FileNotFoundError:
-        # terminal-notifier не установлен / не найден — молча игнорируем
-        pass
-
-
 def get_last_screenshot() -> Path:
     if not SCREENSHOTS_DIR.exists():
         print(f"Папка со скриншотами не найдена: {SCREENSHOTS_DIR}")
@@ -52,7 +32,6 @@ def get_last_screenshot() -> Path:
         sys.exit(1)
 
     return files[-1]  # самый свежий по времени изменения
-
 
 def run_musceler(local_path: Path) -> str:
     # Запускаем musceler.py как отдельный процесс и читаем его вывод
@@ -79,12 +58,10 @@ def run_musceler(local_path: Path) -> str:
 
     return url
 
-
 def copy_to_clipboard(text: str):
     # macOS: утилита pbcopy
     proc = subprocess.Popen(["pbcopy"], stdin=subprocess.PIPE, text=True)
     proc.communicate(input=text)
-
 
 def main():
     last = get_last_screenshot()
@@ -95,9 +72,6 @@ def main():
 
     copy_to_clipboard(url)
     print("Ссылка скопирована в буфер обмена.")
-
-    notify_screenshot_uploaded(url)
-
 
 if __name__ == "__main__":
     main()
