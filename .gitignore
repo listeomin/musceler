@@ -1,8 +1,6 @@
 scrn/
+!backup/
 logs/
-*.log
-*.err.log
-*.pyc
-watcher.plist
 __pycache__/
+*.pyc
 .DS_Store
